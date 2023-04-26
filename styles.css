@@ -5,12 +5,14 @@ body{
 .tab{
     tab-size: 50px;
 }
+
 h1{
     color: #1E90FF;
+    text-align: center;
 }
 
 h2{
-    font-size: 25px;
+    font-size: 50px;
     color: #672976;
     display: inline;
 }
