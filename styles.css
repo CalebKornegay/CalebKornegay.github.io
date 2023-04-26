@@ -5,10 +5,14 @@ body{
 .tab{
     tab-size: 50px;
 }
-
 h1{
+    color: #1E90FF;
+}
+
+h2{
     font-size: 25px;
     color: #672976;
+    display: inline;
 }
 
 a{
