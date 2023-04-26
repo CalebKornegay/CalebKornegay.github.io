@@ -7,7 +7,7 @@ body{
 }
 
 h1{
-    font-size: 25;
+    font-size: 25px;
     color: #672976;
 }
 
@@ -17,4 +17,5 @@ a{
 
 title{
     text-align: center;
+    font-size: 40px;
 }
