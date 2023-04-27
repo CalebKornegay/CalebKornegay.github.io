@@ -1,30 +1,36 @@
-body{
-    background-color: #30363d;
+.dip{
+    display: inline;
+    padding-inline-start: 200px;
+    padding-inline-end: 200px;
 }
 
-.tab{
-    tab-size: 50px;
+html{
+    background-color: #171515;
+}
+
+body{
+    text-align: center;
 }
 
 h1{
-    color: #1E90FF;
+    color: #6729a7;
     text-align: center;
+    padding-top: 100px;
 }
 
 h2{
     font-size: 30px;
-    color: #672976;
+    color: #1E90FF;
+    display: inline;
+}
+
+h3{
+    color: white;
     display: inline;
 }
 
 a{
     text-decoration: none;
-    color: #672976;
-    display: inline;
-    line-break: unset;
-}
-
-title{
-    text-align: center;
-    font-size: 40px;
+    color: #1E90FF;
+    padding-left: 100px;
 }
