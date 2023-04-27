@@ -1,7 +1,7 @@
 .dip{
     display: inline;
-    padding-inline-start: 200px;
-    padding-inline-end: 200px;
+    padding-inline-start: 20%;
+    padding-inline-end: 20%;
 }
 
 html{
@@ -15,11 +15,10 @@ body{
 h1{
     color: #6729a7;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 10%;
 }
 
 h2{
-    font-size: 30px;
     color: #1E90FF;
     display: inline;
 }
@@ -32,5 +31,5 @@ h3{
 a{
     text-decoration: none;
     color: #1E90FF;
-    padding-left: 100px;
+    padding-left: 5%;
 }
