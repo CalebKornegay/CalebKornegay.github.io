@@ -4,13 +4,18 @@
     padding-inline-end: 200px;
 }
 
+html{
+    background-color: #171515;
+}
+
 body{
-    background-color: #30363d;
+    text-align: center;
 }
 
 h1{
-    color: #672976;
+    color: #6729a7;
     text-align: center;
+    padding-top: 100px;
 }
 
 h2{
@@ -19,8 +24,13 @@ h2{
     display: inline;
 }
 
+h3{
+    color: white;
+    display: inline;
+}
+
 a{
     text-decoration: none;
     color: #1E90FF;
-    padding-right: 150px;
+    padding-left: 100px;
 }
