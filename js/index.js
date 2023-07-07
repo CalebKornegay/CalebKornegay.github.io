@@ -14,5 +14,5 @@ function Github(){
     window.open("https://github.com/CalebKornegay/")
 }
 function Info(){
-    window.open("https://calebkornegay.github.io/contact.html");
+    window.open("contact.html");
 }
