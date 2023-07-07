@@ -26,6 +26,7 @@ a{
     text-decoration: none;
     color: #1E90FF;
     padding-left: 5%;
+<<<<<<< HEAD
 }
 
 footer{
@@ -33,4 +34,6 @@ footer{
     bottom: 10px;
     left: 50%;
     font-size: 20px;
+=======
+>>>>>>> de112345b7b047be6479e18689d71d6c8a1ed167
 }
