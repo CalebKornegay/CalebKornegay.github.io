@@ -2,7 +2,7 @@ function Superball(){
     window.open("http://web.eecs.utk.edu/~jplank/plank/classes/cs302/Labs/Lab5/#:~:text=Here%27s%20the%20Superball%20Challenge%20Hall%20Of%20Fame%20(scores%20over%20500)%3A");
 }
 function Resume(){
-    window.open("CalebsNewResume.docx");
+    window.open("Resume.docx");
 }
 function Portfolio(){
     window.open("https://calebkornegay.wordpress.com/");
