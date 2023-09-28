@@ -1,5 +1,5 @@
 function Superball(){
-    window.open("http://web.eecs.utk.edu/~jplank/plank/classes/cs302/Labs/Lab5/#:~:text=Here%27s%20the%20Superball%20Challenge%20Hall%20Of%20Fame%20(scores%20over%20500)%3A");
+    window.open("http://web.eecs.utk.edu/~jplank/plank/classes/cs302/Labs/Lab5/#:~:text=17246.98-,Caleb%20Kornegay,-CS302%2C%20Spring%2C%202023");
 }
 function Resume(){
     window.open("Resume.docx");
