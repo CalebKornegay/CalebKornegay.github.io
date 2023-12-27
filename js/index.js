@@ -1,8 +1,8 @@
 function Superball(){
-    window.open("http://web.eecs.utk.edu/~jplank/plank/classes/cs302/Labs/Lab5/#:~:text=17246.98-,Caleb%20Kornegay,-CS302%2C%20Spring%2C%202023");
+    window.open("https://web.eecs.utk.edu/~jplank/plank/classes/cs302/Labs/Lab5/#:~:text=CS302%2C%20Fall%2C%202014-,4,CS302%2C%20Spring%2C%202023,-5");
 }
 function Resume(){
-    window.open("Resume.docx");
+    window.open("files/Resume.docx");
 }
 function Portfolio(){
     window.open("https://calebkornegay.wordpress.com/");
@@ -15,4 +15,7 @@ function Github(){
 }
 function Info(){
     window.open("contact.html");
+}
+function Burnout(){
+    window.open("https://github.com/utk-cs340-fall23/RaceMob");
 }
