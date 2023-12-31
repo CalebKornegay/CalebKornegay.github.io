@@ -1,11 +1,17 @@
 import Intro from "@/components/intro";
+import Divider from "@/components/divider";
+import About from "@/components/about";
+import Projects from "@/components/projects";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center px-4">
         <Intro />
+        <Divider />
+        <About />
+        <Projects />
     </main>
-  )
+  );
 }
 {/* <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">

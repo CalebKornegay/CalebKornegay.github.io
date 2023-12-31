@@ -63,16 +63,16 @@ export const projectsData = [
     title: "Burnout",
     description:
       "I worked as a full-stack developer on this project for 4 months, mainly frontend with ReactNative.",
-    tags: ["ReactNative", "Django", "PostgreSQL", "Python", "Scripting"],
+    tags: ["React Native", "Django", "PostgreSQL", "Python", "Scripting"],
     imageUrl: burnoutImg,
   },
-//   {
-//     title: "rmtDev",
-//     description:
-//       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-//     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-//     imageUrl: rmtdevImg,
-//   },
+  {
+    title: "rmtDev",
+    description:
+      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+    imageUrl: burnoutImg,
+  },
 //   {
 //     title: "Word Analytics",
 //     description:

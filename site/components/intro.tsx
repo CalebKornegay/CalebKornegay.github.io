@@ -3,16 +3,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import burnoutImg from '@/public/burnout.png'
-import Link from 'next/link'
-import { BsArrowRight } from 'react-icons/bs'
+import burnoutImg from '@/public/burnout.png';
+import Link from 'next/link';
+import { BsArrowRight } from 'react-icons/bs';
 import { TbFileDownload } from "react-icons/tb";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
 export default function Intro() {
   return (
-    <section className="mb-28 max-w-[50rem] text-center sm:mb-0">
+    <section id="home" className="scroll-mt-24 mb-28 max-w-[50rem] text-center sm:mb-0">
         <div className="flex items-center justify-center">
             <div className="relative">
                 <motion.div
@@ -39,11 +39,11 @@ export default function Intro() {
             </div>
         </div>
 
-        <motion.p className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        <motion.h1 className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{opacity: 0, y: 100}}
         animate={{opacity: 1, y: 0}}>
             {`Hello, I'm Caleb, an aspiring software engineer from Knoxville Tennessee.`}
-        </motion.p>
+        </motion.h1>
 
         <motion.div className="flex flex-col sm:flex-row justify-center gap-2 px-4 text-lg font-medium"
         initial={{opacity: 0, y: 100}}
