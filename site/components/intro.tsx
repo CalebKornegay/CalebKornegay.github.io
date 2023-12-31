@@ -9,7 +9,6 @@ import { BsArrowRight } from 'react-icons/bs'
 import { TbFileDownload } from "react-icons/tb";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import Resume from '@/public/Resume.docx'
 
 export default function Intro() {
   return (
@@ -54,11 +53,11 @@ export default function Intro() {
         }}>
             <Link className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:bg-gray-950 hover:scale-110 active:scale-105 transition" href="#contact">Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition"/> </Link>
 
-            <a className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer" href="/Resume.docx" download>Download Resume <TbFileDownload className="group-hover:translate-y-1 transition"/> </a>
+            <a className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10" href="/Resume.docx" download>Download Resume <TbFileDownload className="group-hover:translate-y-1 transition"/> </a>
 
-            <a className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer" href="https://www.linkedin.com/in/caleb-kornegay-77923818a/"><FaLinkedin /></a>
+            <a className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer hover:text-gray-950 border border-black/10" href="https://www.linkedin.com/in/caleb-kornegay-77923818a/" target="_blank"><FaLinkedin /></a>
 
-            <a className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer" href="https://github.com/CalebKornegay"><FaGithub /></a>
+            <a className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 hover:text-gray-950 transition cursor-pointer border border-black/10" href="https://github.com/CalebKornegay" target="_blank"><FaGithub /></a>
         </motion.div>
     </section>
   );
