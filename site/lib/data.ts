@@ -1,8 +1,11 @@
 import React from "react";
 import { DiGithubAlt } from "react-icons/di";
-import { FaUserGraduate } from "react-icons/fa6";
+import { FaUserGraduate, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
 import { GiElectricalResistance } from "react-icons/gi";
-import burnoutImg from "@/public/burnout.png";
+import { CiMail } from "react-icons/ci";
+import burnoutImg from "@/public/burnout-demo.jpg";
+import sudokuImg from "@/public/sudoku.png";
+import { TbFileDownload } from "react-icons/tb";
 
 export const links = [
   {
@@ -67,19 +70,12 @@ export const projectsData = [
     imageUrl: burnoutImg,
   },
   {
-    title: "rmtDev",
+    title: "Sudoku Generator",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: burnoutImg,
+      "A CLI for sudoku board random generation, playing, and solutions all in one place.",
+    tags: ["C++", "Recursion", "Make"],
+    imageUrl: sudokuImg,
   },
-//   {
-//     title: "Word Analytics",
-//     description:
-//       "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-//     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-//     imageUrl: wordanalyticsImg,
-//   },
 ] as const;
 
 export const skillsData = [
@@ -100,4 +96,27 @@ export const skillsData = [
   "Rust",
   "Bash",
   "Java",
+] as const;
+
+export const contactData = [
+    {
+        link: "/Resume.docx",
+        icon: React.createElement(TbFileDownload),
+    },
+    {
+        link: "https://www.instagram.com/__caleb_k__/",
+        icon: React.createElement(FaInstagram),
+    },
+    {
+        link: "https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBmzpsBpGcPvrPFBtXvmmSvDFjPWDBwdCCXQpRjqxCttjCqHgPjCssMzsLKjBXXJzcHMgzn",
+        icon: React.createElement(CiMail),
+    },
+    {
+        link: "https://github.com/CalebKornegay",
+        icon: React.createElement(FaGithub),
+    },
+    {
+        link: "https://www.linkedin.com/in/caleb-kornegay-77923818a/",
+        icon: React.createElement(FaLinkedin),
+    },
 ] as const;

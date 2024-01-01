@@ -63,7 +63,7 @@ export default function Intro() {
         transition={{
             delay: 0.1,
         }}>
-            <Link className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:bg-gray-950 hover:scale-110 active:scale-105 transition" href="#contact">Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition"/> </Link>
+            {/* <Link className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:bg-gray-950 hover:scale-110 active:scale-105 transition" href="#contact">Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition"/> </Link> */}
 
             <a className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10" href="/Resume.docx" download>Download Resume <TbFileDownload className="group-hover:translate-y-1 transition"/> </a>
 
