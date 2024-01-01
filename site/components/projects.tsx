@@ -1,21 +1,33 @@
 "use client";
 
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { projectsData } from '@/lib/data';
 import Image from 'next/image';
 import { useScroll, useTransform } from 'framer-motion';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 export default function Projects() {
-    const ref = useRef<HTMLDivElement>(null);
+    const { ref, inView } = useInView({
+        threshold: 0.75,
+    });
+    const { setActiveSection, timeOfLastClick} = useActiveSectionContext();
+    useEffect(() => {
+        if (inView && Date.now() - timeOfLastClick > 1000) {
+            setActiveSection("Projects");
+        }
+    }, [inView, setActiveSection, timeOfLastClick]);
+
+    const conref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
-        target: ref,
+        target: conref,
         offset: ["0 1", "1.33 1"],
     });
     const scaleProgress = useTransform(scrollYProgress, [0,1], [0.75, 1]);
     const opacityProgress = useTransform(scrollYProgress, [0,1], [0.6, 1]);
   return (
-    <section id="projects" className="scroll-mt-24">
+    <section ref={ref} id="projects" className="scroll-mt-24 mb-28">
         <h2 className="text-center mb-8 text-3xl text-black font-medium capitalize">My Projects</h2>
         <div className="">
             {projectsData.map((item => (

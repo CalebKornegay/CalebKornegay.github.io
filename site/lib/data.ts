@@ -25,10 +25,10 @@ export const links = [
     name: "Experience",
     hash: "#experience",
   },
-  {
-    name: "Contact",
-    hash: "#contact",
-  },
+//   {
+//     name: "Contact",
+//     hash: "#contact",
+//   },
 ] as const;
 
 export const experiencesData = [
@@ -38,7 +38,7 @@ export const experiencesData = [
     description:
       "Currently pursuing a bachelor's degree in computer science from the University of Tennessee, Knoxville.",
     icon: React.createElement(FaUserGraduate),
-    date: "2025",
+    date: "2021 - 2025",
   },
   {
     title: "Teacher's Assistant",
