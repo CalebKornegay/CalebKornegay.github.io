@@ -108,7 +108,7 @@ export const contactData = [
         icon: React.createElement(FaInstagram),
     },
     {
-        link: "https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBmzpsBpGcPvrPFBtXvmmSvDFjPWDBwdCCXQpRjqxCttjCqHgPjCssMzsLKjBXXJzcHMgzn",
+        link: "mailto:caleb.kornegay@gmail.com",
         icon: React.createElement(CiMail),
     },
     {
