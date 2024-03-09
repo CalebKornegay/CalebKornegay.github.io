@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useEffect, useRef } from 'react';
 import { projectsData } from '@/lib/data';
@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useActiveSectionContext } from '@/context/active-section-context';
 
+let height: number;
 
 export default function Projects() {
     const { ref, inView } = useInView({
@@ -15,6 +16,7 @@ export default function Projects() {
     });
     const { setActiveSection, timeOfLastClick} = useActiveSectionContext();
     useEffect(() => {
+        height = window.innerHeight;
         if (inView && Date.now() - timeOfLastClick > 1000) {
             setActiveSection("Projects");
         }
@@ -23,7 +25,7 @@ export default function Projects() {
     const conref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: conref,
-        offset: ["0 1", self.innerHeight > 900 ? "1.2 1" : ".5 1"],
+        offset: ["0 1", height > 900 ? "1.2 1" : ".5 1"],
     });
     const scaleProgress = useTransform(scrollYProgress, [0,1], [0.7, 1]);
     const opacityProgress = useTransform(scrollYProgress, [0,1], [0.6, 1]);
