@@ -37,7 +37,7 @@ export default function Projects() {
                         opacity: opacityProgress,
                     }} className="group mb-3 sm:mb-8 last:mb-0">
                     <section ref={conref} 
-                    className="relative bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 sm:h-[20rem] group-even:pl-8 hover:bg-gray-200 transition mb-3 sm:mb-8 last:mb-0 rounded-lg">
+                    className="relative bg-gray-100  sm:max-w-[30rem] xl:max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 sm:h-[20rem] group-even:pl-8 hover:bg-gray-200 transition mb-3 sm:mb-8 last:mb-0 rounded-lg flex">
                         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 max-w-[50%] flex flex-col h-full group-even:ml-[18rem]">
                             <h3 className="text-2xl font-semibold">{item.title}</h3>
                             <p className="mt-2 leading-relaxed text-gray-700">{item.description}</p>
@@ -47,7 +47,7 @@ export default function Projects() {
                                 )))}
                             </ul>
                         </div>
-                        <Image src={item.imageUrl} alt={item.title} quality={95} className="absolute top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl group-even:right-[initial] group-even:-left-40 group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2 transition group-hover:scale-105"/>
+                        <Image src={item.imageUrl} alt={item.title} quality={95} className="absolute top-8 -right-40 max-w-[70%] rounded-t-lg shadow-2xl group-even:right-[initial] group-even:-left-[3.5rem] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2 transition group-hover:scale-105"/>
                     </section></motion.div>
                 </React.Fragment>
             )))}

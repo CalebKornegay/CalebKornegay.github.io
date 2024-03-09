@@ -36,7 +36,7 @@ export default function Intro() {
                     }}
                 >
                     <Image src={burnoutImg} alt="burnout" quality="95" priority={true}
-                    className="h-51 w-52 rounded-full object-cover border-[0.35rem] border-white shadow-xl"/>
+                    className="h-51 w-52 rounded-full object-cover border-[0.35rem] border-white shadow-xl sm:w-40 sm:h-39"/>
                 </motion.div>
                 <motion.span className="absolute bottom-0 right-0 text-4xl"
                     initial={{opacity: 0, scale: 0}}
@@ -57,7 +57,7 @@ export default function Intro() {
             {`Hello, I'm Caleb, an aspiring software engineer from Knoxville Tennessee.`}
         </motion.h1>
 
-        <motion.div className="flex flex-col sm:flex-row justify-center gap-2 px-4 text-lg font-medium"
+        <motion.div className="flex sm:flex-col xl:flex-row justify-center gap-3 px-4 text-lg font-medium"
         initial={{opacity: 0, y: 100}}
         animate={{opacity: 1, y: 0}}
         transition={{
@@ -65,11 +65,11 @@ export default function Intro() {
         }}>
             {/* <Link className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:bg-gray-950 hover:scale-110 active:scale-105 transition" href="#contact">Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition"/> </Link> */}
 
-            <a className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10" href="/Resume.docx" download>Download Resume <TbFileDownload className="group-hover:translate-y-1 transition"/> </a>
+            <a className="group bg-white p-4 flex items-center rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10" href="/Resume.docx" download><TbFileDownload className="group-hover:translate-y-1 transition"/> </a>
 
-            <a className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer hover:text-gray-950 border border-black/10" href="https://www.linkedin.com/in/caleb-kornegay-77923818a/" target="_blank"><FaLinkedin /></a>
+            <a className="bg-white p-4 text-gray-700 flex items-center rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer hover:text-gray-950 border border-black/10" href="https://www.linkedin.com/in/caleb-kornegay-77923818a/" target="_blank"><FaLinkedin /></a>
 
-            <a className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 hover:text-gray-950 transition cursor-pointer border border-black/10" href="https://github.com/CalebKornegay" target="_blank"><FaGithub /></a>
+            <a className="bg-white p-4 text-gray-700 flex items-center rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 hover:text-gray-950 transition cursor-pointer border border-black/10" href="https://github.com/CalebKornegay" target="_blank"><FaGithub /></a>
         </motion.div>
     </section>
   );
