@@ -12,17 +12,17 @@ export default function Header() {
 
     return (
     <header className="z-[999] relative">
-        <motion.div className="w-full fixed top-0 left-1/2 h-[4.5rem] rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:rounded-full xl:w-[30%] sm:w-[70%]"
+        <motion.div className="w-full fixed top-2 left-1/2 h-[3.5rem] border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] rounded-full max-w-[80%] xl:max-w-[40rem]"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
         ></motion.div>
-        <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-            <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
+        <nav className="flex fixed top-[.75rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
+            <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 gap-x-2 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-3">
                 {links.map((link) => (
                     <motion.li className="relative h-3/4 flex items-center justify-center" key={link.hash}
                     initial={{ y: -100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}>
-                        <Link className={clsx("flex w-full items-center justify-center sm:px-2 xl:px-5 py-3 hover:text-gray-700 transition ", {"text-gray-950": activeSection === link.name})} href={link.hash}
+                        <Link className={clsx("flex w-full items-center justify-center px-1 xl:px-5 py-3 hover:text-gray-700 transition ", {"text-gray-950": activeSection === link.name})} href={link.hash}
                         onClick={() => {
                             setActiveSection(link.name)
                             setTimeOfLastClick(Date.now())

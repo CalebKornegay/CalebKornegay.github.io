@@ -24,7 +24,7 @@ export default function Intro() {
     }, [inView, setActiveSection, timeOfLastClick]);
     
   return (
-    <section ref={ref} id="home" className="scroll-mt-[100rem] mb-28 max-w-[50rem] text-center sm:mb-0">
+    <section ref={ref} id="home" className="scroll-mt-[100rem] mb-10 max-w-[50rem] text-center sm:mb-0">
         <div className="flex items-center justify-center">
             <div className="relative">
                 <motion.div

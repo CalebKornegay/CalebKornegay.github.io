@@ -27,7 +27,7 @@ export default function Projects() {
     const scaleProgress = useTransform(scrollYProgress, [0,1], [0.75, 1]);
     const opacityProgress = useTransform(scrollYProgress, [0,1], [0.6, 1]);
   return (
-    <section ref={ref} id="projects" className="scroll-mt-24 mb-28 max-w-[53rem]">
+    <section ref={ref} id="projects" className="w-full scroll-mt-24 mb-28 max-w-[100%] xl:max-w-[40rem]">
         <h2 className="text-center mb-8 text-3xl text-black font-medium capitalize">My Projects</h2>
         <div className="">
             {projectsData.map((item => (
