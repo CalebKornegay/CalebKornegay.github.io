@@ -57,7 +57,7 @@ export default function Intro() {
             {`Hello, I'm Caleb, an aspiring software engineer from Knoxville Tennessee.`}
         </motion.h1>
 
-        <motion.div className="flex sm:flex-col xl:flex-row justify-center gap-3 px-4 text-lg font-medium"
+        <motion.div className="flex flex-col sm:flex-row justify-center gap-3 px-4 text-lg font-medium"
         initial={{opacity: 0, y: 100}}
         animate={{opacity: 1, y: 0}}
         transition={{
