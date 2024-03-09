@@ -25,10 +25,10 @@ export default function Projects() {
     const conref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: conref,
-        offset: ["0 1", height > 900 ? "1.2 1" : ".35 1"],
+        offset: ["0 1", height > 900 ? "1.2 1" : ".2 1"],
     });
-    const scaleProgress = useTransform(scrollYProgress, [0,1], [0.7, 1]);
-    const opacityProgress = useTransform(scrollYProgress, [0,1], [0.6, 1]);
+    const scaleProgress = useTransform(scrollYProgress, [0,1], height > 900 ? [0.7, 1] : [0.9, 1]);
+    const opacityProgress = useTransform(scrollYProgress, [0,1], height > 900 ? [0.6, 1] : [0.9, 1]);
   return (
     <section ref={ref} id="projects" className="w-full scroll-mt-24 mb-28 max-w-[100%] xl:max-w-[40rem]">
         <h2 className="text-center mb-8 text-3xl text-black font-medium capitalize">My Projects</h2>
