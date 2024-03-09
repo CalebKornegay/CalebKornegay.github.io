@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useActiveSectionContext } from '@/context/active-section-context';
 
+
 export default function Projects() {
     const { ref, inView } = useInView({
         threshold: 0.75,
@@ -22,9 +23,9 @@ export default function Projects() {
     const conref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: conref,
-        offset: ["0 1", "1.33 1"],
+        offset: ["0 1", self.innerHeight > 900 ? "1.2 1" : ".5 1"],
     });
-    const scaleProgress = useTransform(scrollYProgress, [0,1], [0.75, 1]);
+    const scaleProgress = useTransform(scrollYProgress, [0,1], [0.7, 1]);
     const opacityProgress = useTransform(scrollYProgress, [0,1], [0.6, 1]);
   return (
     <section ref={ref} id="projects" className="w-full scroll-mt-24 mb-28 max-w-[100%] xl:max-w-[40rem]">
