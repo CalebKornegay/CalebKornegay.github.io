@@ -25,7 +25,7 @@ export default function Projects() {
     const conref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: conref,
-        offset: ["0 1", height > 900 ? "1.2 1" : ".5 1"],
+        offset: ["0 1", height > 900 ? "1.2 1" : ".35 1"],
     });
     const scaleProgress = useTransform(scrollYProgress, [0,1], [0.7, 1]);
     const opacityProgress = useTransform(scrollYProgress, [0,1], [0.6, 1]);
