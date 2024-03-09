@@ -29,7 +29,7 @@ export default function Projects() {
   return (
     <section ref={ref} id="projects" className="scroll-mt-24 mb-28">
         <h2 className="text-center mb-8 text-3xl text-black font-medium capitalize">My Projects</h2>
-        <div className="">
+        <div className="max-w-[53rem]">
             {projectsData.map((item => (
                 <React.Fragment key={item.title}>
                     <motion.div style={{
