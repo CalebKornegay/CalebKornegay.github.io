@@ -55,9 +55,9 @@ export const experiencesData = [
     title: "Electrical Engineer",
     location: "Knoxville, TN",
     description:
-      "I am currently an electrical engineer at Siemens for the Spring - Summer 2024.",
+      "I worked as a software engineer at Siemens Healthineers for the Spring - Summer 2024.",
     icon: React.createElement(GiElectricalResistance),
-    date: "2024 - present",
+    date: "2024 - 2024",
   },
 ] as const;
 
@@ -79,23 +79,17 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
   "CSS",
-  "JavaScript",
   "TypeScript",
   "React",
-  "Next.js",
   "Node.js",
   "Git",
-  "Tailwind",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "C++",
-  "C",
-  "Rust",
-  "Bash",
+  "Tailwind",,
+  "C/C++",
   "Java",
+  "Go",
+  "Bash",
+  "Python",
 ] as const;
 
 export const contactData = [
