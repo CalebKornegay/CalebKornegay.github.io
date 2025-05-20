@@ -1,0 +1,17 @@
+import React from 'react';
+import styled from 'styled-components';
+
+const Container = styled.div`
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+export default function Experience() {
+  return (
+    <Container id="experience">
+        Experience
+    </Container>
+  );
+}

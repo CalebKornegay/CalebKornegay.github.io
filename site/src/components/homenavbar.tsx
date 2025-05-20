@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { homelinks } from '../consts/homelinks'
-import type { homelink } from '../consts/homelinks';
+import { homelinks } from '../consts'
+import type { homelink } from '../consts';
 import { NavLink } from 'react-router';
 
 const Container = styled.div`
@@ -14,7 +14,8 @@ const Container = styled.div`
     z-index: 999;
     border-style: solid;
     border-width: 1px;
-    padding: 5px 10px 5px 10px;
+    padding: 5px 15px 5px 15px;
+    height: 1.75em;
     border-radius: 15px;
     border-color: white;
     background-color: white;
@@ -34,11 +35,9 @@ const Header = styled(NavLink)`
 export default function HomeNavBar() {
   return (
     <Container>
-        {homelinks.map((link: homelink, idx: number) => {
-            return (
-                <Header to={link.href}>{link.name}</Header>
-            );
-        })}
+        {homelinks.map(
+            (link: homelink) => <Header to={link.href}>{link.name}</Header>
+        )}
     </Container>
   );
 }

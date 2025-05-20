@@ -1,7 +1,5 @@
 import React from 'react';
-import ScrollToHashElement from '../components/scrolltohashelement';
 import styled from 'styled-components';
-import HomeNavBar from '../components/homenavbar';
 
 const Container = styled.div`
     background-color: white;
@@ -10,21 +8,12 @@ const Container = styled.div`
     align-items: center;
 `;
 
-const Margin = styled.div`
-    margin-top: 6rem;
-`;
-
 export default function Home() {
     return (
-        <Container>
-            <ScrollToHashElement behavior='smooth' inline='center' block='center'/>
-            <HomeNavBar />
-            <Margin />
-            <div id="home">Home</div>
-            <div id="interests">Interests</div>
-            <div id="projects">Projects</div>
-            <div id="experience">Experience</div>
-            <div id="skills">Skills</div>
+        <Container id="home">
+            <h1>About Me</h1>
+            <p>Hello, I'm Caleb, an aspiring software engineer from Knoxville, Tennesee.</p>
+            <p>I recently graduated with a Bachelor's of Science in Computer Science with a minor in cybersecurity from the University of Tennessee - Knoxville.</p>
         </Container>
     );
 }

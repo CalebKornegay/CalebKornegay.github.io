@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState, useEffect, useRef } from "react";
+import { useLayoutEffect, useState, useEffect, useRef } from 'react';
 
 
 interface ScrollToHashElementProps {
