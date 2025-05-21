@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,7 +10,7 @@ const Container = styled.div`
 export default function Skills() {
   return (
     <Container id="skills">
-        Skills
+        <h2>Skills</h2>
     </Container>
   );
 }

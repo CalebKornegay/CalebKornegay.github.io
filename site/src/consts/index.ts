@@ -1,5 +1,6 @@
 import { IconBaseProps} from 'react-icons';
-import { DiGithubAlt } from 'react-icons/di';
+import { FaGithub, FaLinkedin } from 'react-icons/fa6';
+import { TbFileDownload } from 'react-icons/tb';
 
 export type homelink = {
     name: string,
@@ -8,7 +9,8 @@ export type homelink = {
 
 export type hotlink = {
     resource: string,
-    icon: React.FC<IconBaseProps>
+    icon: React.FC<IconBaseProps>,
+    icon_color: string
 };
 
 export const homelinks: homelink[]  = [
@@ -36,7 +38,18 @@ export const homelinks: homelink[]  = [
 
 export const hotlinks = [
     {
+        resource: '/Resume.docx',
+        icon: TbFileDownload as React.FC<IconBaseProps>,
+        icon_color: '#121212'
+    },
+    {
         resource: 'https://github.com/calebkornegay',
-        icon: DiGithubAlt as React.FC<IconBaseProps>
+        icon: FaGithub as React.FC<IconBaseProps>,
+        icon_color: '#000000'
+    },
+    {
+        resource: 'https://www.linkedin.com/in/caleb-kornegay-77923818a/',
+        icon: FaLinkedin as React.FC<IconBaseProps>,
+        icon_color: '#0077B5'
     }
 ];
