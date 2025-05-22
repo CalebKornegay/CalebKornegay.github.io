@@ -36,7 +36,7 @@ export default function HomeNavBar() {
   return (
     <Container>
         {homelinks.map(
-            (link: homelink) => <Header to={link.href}>{link.name}</Header>
+            (link: homelink) => <Header to={{pathname: '/', hash: link.href}}>{link.name}</Header>
         )}
     </Container>
   );

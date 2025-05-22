@@ -10,11 +10,6 @@ import Skills from './skills';
 import Divider from '../components/divider';
 import Hotlinks from '../components/hotlinks';
 
-const RootContainer = styled.body`
-    background-color: rgb(241 245 249);
-    color: rgb(17 24 39);
-`;
-
 const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -56,13 +51,11 @@ const Margin = styled.div`
 
 export default function HomeLayout() {
     return (
-        <RootContainer>
+        <>
             <BlueBubble />
             <OrangeBubble />
             <Container>
                 <ScrollToHashElement behavior='smooth' inline='center' block='center'/>
-                <HomeNavBar />
-                <Margin />
                 <Home />
                 <Hotlinks />
                 <Divider />
@@ -74,6 +67,6 @@ export default function HomeLayout() {
                 <Margin />
                 <Skills />
             </Container>
-        </RootContainer>
+        </>
     );
 }
