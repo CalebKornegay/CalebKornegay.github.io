@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect, useRef, useState }  from 'react';
 import styled from 'styled-components';
 import { Outlet, useNavigate } from 'react-router';
 
@@ -78,13 +78,27 @@ const Header = styled.h2`
 
 export default function Projects() {
     const navigate = useNavigate();
+    const rdiffref = useRef<HTMLDivElement>(null);
+    const sdref = useRef<HTMLDivElement>(null);
+    const digitalref = useRef<HTMLDivElement>(null);
+
+    const [rdiffHeight, setRdiffHeight] = useState<number | undefined>(undefined);
+    const [sdHeight, setSdHeight] = useState<number | undefined>(undefined);
+    const [digitalHeight, setDigitalHeight] = useState<number | undefined>(undefined);
+
+    useEffect(() => {
+        setRdiffHeight(rdiffref?.current?.clientHeight);
+        setSdHeight(sdref?.current?.clientHeight);
+        setDigitalHeight(digitalref?.current?.clientHeight);
+    }, []);
+
   return (
     <Container id="projects">
         <Outlet />
         <Header onClick={() => navigate("/projects")}>Projects</Header>
         <ProjectBox onClick={() => navigate("/projects/rdiff")}>
 
-            <BoxLeft style={{paddingLeft: 12, paddingBottom: 8, marginRight: 2}}>
+            <BoxLeft ref={rdiffref} style={{padding: 12, paddingTop: 0}}>
                 <h3 style={{textAlign: 'center'}}>Rdiff</h3>
                 <p>A file difference viewer Terminal User Interface (TUI) written in Rust with syntax highlighting.</p>
                 <SkillsBox>
@@ -98,7 +112,7 @@ export default function Projects() {
                 </SkillsBox>
             </BoxLeft>
 
-            <BoxRight>
+            <BoxRight style={{height: rdiffHeight}}>
                 <RightImage src='/rdiff.png' alt='2 files being diffed'/>
             </BoxRight>
 
@@ -106,13 +120,13 @@ export default function Projects() {
 
         <ProjectBox onClick={() => navigate("/projects/senior_design")}>
 
-            <BoxLeft>
+            <BoxLeft style={{height: sdHeight}}>
                 <LeftImage src='/senior_design_client_home_1.png' alt='blockchain event ticketing' />
             </BoxLeft>
 
-            <BoxRight style={{paddingLeft: 12, paddingBottom: 8}}>
+            <BoxRight ref={sdref} style={{padding: 12, paddingTop: 0}}>
                 <h3 style={{textAlign: 'center'}}>OpenTicket</h3>
-                <p>A Blockchain alternative to TicketMaster that implements a low-cost and scalp-resistant ticketing solution</p>
+                <p>A blockchain-powered alternative to TicketMaster that implements a low-cost and scalp-resistant ticketing solution</p>
                 <SkillsBox>
                     <Skill>Golang</Skill>
                     <Skill>AWS</Skill>
@@ -124,6 +138,26 @@ export default function Projects() {
                     <Skill>PostgreSQL</Skill>
                     <Skill>Serverless</Skill>
                 </SkillsBox>
+            </BoxRight>
+
+        </ProjectBox>
+
+        <ProjectBox>
+
+            <BoxLeft ref={digitalref} style={{padding: 12, paddingTop: 0}}>
+                <h3 style={{textAlign: 'center'}}>Digital Dash</h3>
+                <p>A digital dash viewer on your phone that reports metrics from your car.</p>
+                <SkillsBox>
+                    <Skill>Golang</Skill>
+                    <Skill>Systemd</Skill>
+                    <Skill>Bash</Skill>
+                    <Skill>Kotlin</Skill>
+                    <Skill>Bluetooth LE</Skill>
+                </SkillsBox>
+            </BoxLeft>
+
+            <BoxRight style={{height: digitalHeight}}>
+                <RightImage src='/digital_dash.jpg' alt='digital dash' />
             </BoxRight>
 
         </ProjectBox>
