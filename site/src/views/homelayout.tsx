@@ -7,7 +7,6 @@ import Interests from './interests';
 import Projects from './projects';
 import Experience from './experience';
 import Skills from './skills';
-import Divider from '../components/divider';
 import Hotlinks from '../components/hotlinks';
 
 const Container = styled.div`
@@ -55,16 +54,12 @@ export default function HomeLayout() {
             <BlueBubble />
             <OrangeBubble />
             <Container>
-                <ScrollToHashElement behavior='smooth' inline='center' block='center'/>
+                <ScrollToHashElement initialBehavior='smooth' behavior='smooth' inline='nearest' block='start'/>
                 <Home />
                 <Hotlinks />
-                <Divider />
                 <Interests />
-                <Margin />
                 <Projects />
-                <Margin />
                 <Experience />
-                <Margin />
                 <Skills />
             </Container>
         </>

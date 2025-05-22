@@ -76,29 +76,27 @@ const Header = styled.h2`
     text-decoration: none;
 `;
 
+const Margin = styled.div`
+    margin-top: 6rem;
+`;
+
 export default function Projects() {
     const navigate = useNavigate();
-    const rdiffref = useRef<HTMLDivElement>(null);
     const sdref = useRef<HTMLDivElement>(null);
-    const digitalref = useRef<HTMLDivElement>(null);
-
-    const [rdiffHeight, setRdiffHeight] = useState<number | undefined>(undefined);
     const [sdHeight, setSdHeight] = useState<number | undefined>(undefined);
-    const [digitalHeight, setDigitalHeight] = useState<number | undefined>(undefined);
 
     useEffect(() => {
-        setRdiffHeight(rdiffref?.current?.clientHeight);
         setSdHeight(sdref?.current?.clientHeight);
-        setDigitalHeight(digitalref?.current?.clientHeight);
-    }, []);
+    }, [sdref]);
 
   return (
     <Container id="projects">
+        <Margin />
         <Outlet />
         <Header onClick={() => navigate("/projects")}>Projects</Header>
         <ProjectBox onClick={() => navigate("/projects/rdiff")}>
 
-            <BoxLeft ref={rdiffref} style={{padding: 12, paddingTop: 0}}>
+            <BoxLeft style={{padding: 12, paddingTop: 0}}>
                 <h3 style={{textAlign: 'center'}}>Rdiff</h3>
                 <p>A file difference viewer Terminal User Interface (TUI) written in Rust with syntax highlighting.</p>
                 <SkillsBox>
@@ -112,7 +110,7 @@ export default function Projects() {
                 </SkillsBox>
             </BoxLeft>
 
-            <BoxRight style={{height: rdiffHeight}}>
+            <BoxRight style={{height: sdHeight}}>
                 <RightImage src='/rdiff.png' alt='2 files being diffed'/>
             </BoxRight>
 
@@ -144,7 +142,7 @@ export default function Projects() {
 
         <ProjectBox>
 
-            <BoxLeft ref={digitalref} style={{padding: 12, paddingTop: 0}}>
+            <BoxLeft style={{padding: 12, paddingTop: 0}}>
                 <h3 style={{textAlign: 'center'}}>Digital Dash</h3>
                 <p>A digital dash viewer on your phone that reports metrics from your car.</p>
                 <SkillsBox>
@@ -156,7 +154,7 @@ export default function Projects() {
                 </SkillsBox>
             </BoxLeft>
 
-            <BoxRight style={{height: digitalHeight}}>
+            <BoxRight style={{height: sdHeight}}>
                 <RightImage src='/digital_dash.jpg' alt='digital dash' />
             </BoxRight>
 

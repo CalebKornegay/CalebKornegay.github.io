@@ -7,9 +7,15 @@ const Container = styled.div`
     align-items: center;
 `;
 
+const Margin = styled.div`
+    margin-top: 6rem;
+`;
+
+
 export default function Experience() {
   return (
     <Container id="experience">
+        <Margin />
         <h2>Experience</h2>
     </Container>
   );

@@ -17,16 +17,11 @@ const Container = styled.div`
     text-align: center;
 `;
 
-const Margin = styled.div`
-    margin-top: 6rem;
-`;
-
 export default function App() {
   return (
     <RootContainer>
         <Container>
             <HomeNavBar />
-            <Margin />
             <Outlet />
         </Container>
     </RootContainer>

@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Divider from '../components/divider';
+
 
 const Container = styled.div`
     display: flex;
@@ -10,6 +12,7 @@ const Container = styled.div`
 export default function Interests() {
   return (
     <Container id="interests">
+        <Divider />
         <h2>Interests</h2>
         <p>I am mostly interested in embedded development using C/C++ and Rust (which I learned recently)!</p>
         <p>I also enjoy mobile development using Kotlin or React Native and backend development in Golang.</p>
