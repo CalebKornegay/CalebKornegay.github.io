@@ -18,7 +18,7 @@ const ProjectBox = styled.div`
     background-color: white;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    cursor: pointer;
+    // cursor: pointer;
 `;
 
 const SkillsBox = styled.div`
@@ -64,7 +64,7 @@ const RightImage = styled.img`
 `;
 
 const LeftImage = styled.img`
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     object-fit: cover;
     border-top-left-radius: 10px;
@@ -94,7 +94,8 @@ export default function Projects() {
         <Margin />
         <Outlet />
         <Header onClick={() => navigate("/projects")}>Projects</Header>
-        <ProjectBox onClick={() => navigate("/projects/rdiff")}>
+        {/* <ProjectBox onClick={() => navigate("/projects/rdiff")}> */}
+        <ProjectBox style={{height: sdHeight}}>
 
             <BoxLeft style={{padding: 12, paddingTop: 0}}>
                 <h3 style={{textAlign: 'center'}}>Rdiff</h3>
@@ -111,21 +112,22 @@ export default function Projects() {
                 </SkillsBox>
             </BoxLeft>
 
-            <BoxRight style={{height: sdHeight}}>
+            <BoxRight>
                 <RightImage src='/rdiff.png' alt='2 files being diffed'/>
             </BoxRight>
 
         </ProjectBox>
 
-        <ProjectBox onClick={() => navigate("/projects/senior_design")}>
+        {/* <ProjectBox onClick={() => navigate("/projects/senior_design")}> */}
+        <ProjectBox style={{height: sdHeight}}>
 
-            <BoxLeft style={{height: sdHeight}}>
+            <BoxLeft>
                 <LeftImage src='/senior_design_client_home_1.png' alt='blockchain event ticketing' />
             </BoxLeft>
 
             <BoxRight ref={sdref} style={{padding: 12, paddingTop: 0}}>
                 <h3 style={{textAlign: 'center'}}>OpenTicket</h3>
-                <p>A blockchain-powered alternative to TicketMaster that implements a low-cost and scalp-resistant ticketing solution</p>
+                <p>A blockchain-powered alternative to TicketMaster that implements a low-cost and scalp-resistant ticketing solution.</p>
                 <SkillsBox>
                     <Skill>Golang</Skill>
                     <Skill>AWS</Skill>
@@ -141,7 +143,7 @@ export default function Projects() {
 
         </ProjectBox>
 
-        <ProjectBox>
+        <ProjectBox style={{height: sdHeight}}>
 
             <BoxLeft style={{padding: 12, paddingTop: 0}}>
                 <h3 style={{textAlign: 'center'}}>Digital Dash</h3>
@@ -156,7 +158,7 @@ export default function Projects() {
                 </SkillsBox>
             </BoxLeft>
 
-            <BoxRight style={{height: sdHeight}}>
+            <BoxRight>
                 <RightImage src='/digital_dash.jpg' alt='digital dash' />
             </BoxRight>
 

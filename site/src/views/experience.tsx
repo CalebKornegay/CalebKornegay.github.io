@@ -33,6 +33,7 @@ const ExperienceBox = styled.div`
     border-radius: 5px;
     padding: 8px 16px 8px 16px;
     text-align: start;
+    background-color: white;
 `;
 
 
