@@ -1,7 +1,6 @@
 import React from 'react';
 import ScrollToHashElement from '../components/scrolltohashelement';
 import styled from 'styled-components';
-import HomeNavBar from '../components/homenavbar';
 import Home from './home';
 import Interests from './interests';
 import Projects from './projects';
@@ -44,8 +43,8 @@ const OrangeBubble = styled.div`
     width: 50vw;
 `;
 
-const Margin = styled.div`
-    margin-top: 6rem;
+const BottomSpacing = styled.div`
+    margin-top: 3rem;
 `;
 
 export default function HomeLayout() {
@@ -61,6 +60,7 @@ export default function HomeLayout() {
                 <Projects />
                 <Experience />
                 <Skills />
+                <BottomSpacing />
             </Container>
         </>
     );

@@ -105,8 +105,9 @@ export default function Projects() {
                     <Skill>Ratatui</Skill>
                     <Skill>Clap</Skill>
                     <Skill>Syntect</Skill>
-                    <Skill>TUI</Skill>
                     <Skill>Sha2</Skill>
+                    <Skill>CLI</Skill>
+                    <Skill>TUI</Skill>
                 </SkillsBox>
             </BoxLeft>
 
@@ -151,6 +152,7 @@ export default function Projects() {
                     <Skill>Bash</Skill>
                     <Skill>Kotlin</Skill>
                     <Skill>Bluetooth LE</Skill>
+                    <Skill>OBD-II</Skill>
                 </SkillsBox>
             </BoxLeft>
 
