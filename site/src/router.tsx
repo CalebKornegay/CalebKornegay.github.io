@@ -1,7 +1,9 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomeLayout from "./views/homelayout";
-import Projects from "./views/projects";
-import App from './App';
+import App from "./App";
+import DigitalDash from "./views/projects/digitaldash";
+import OpenTicket from "./views/projects/openticket";
+import Rdiff from "./views/projects/rdiff";
 
 const router = createBrowserRouter([
   {
@@ -19,16 +21,16 @@ const router = createBrowserRouter([
         errorElement: <div>Error</div>,
         children: [
           {
-            path: "",
-            element: <Projects />,
-          },
-          {
-            path: "senior_design",
-            element: <div>Senior Design</div>,
+            path: "openticket",
+            element: <OpenTicket />,
           },
           {
             path: "rdiff",
-            element: <div>Rdiff</div>,
+            element: <Rdiff />,
+          },
+          {
+            path: "digitaldash",
+            element: <DigitalDash />,
           },
         ],
       },
