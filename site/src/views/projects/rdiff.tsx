@@ -56,17 +56,26 @@ export default function Rdiff() {
       <Divider />
 
       <Hotlinks>
-        <Hotlink href="https://github.com/calebkornegay/rdiff" rel="noreferrer" target="_blank">
-            <FaGithub size={25} color="black" />
+        <Hotlink
+          href="https://github.com/calebkornegay/rdiff"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <FaGithub size={25} color="black" />
         </Hotlink>
-        <Hotlink href="https://crates.io/crates/rdiff3" rel="noreferrer" target="_blank">
-            <FaRust size={25} color="black" />
+        <Hotlink
+          href="https://crates.io/crates/rdiff3"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <FaRust size={25} color="black" />
         </Hotlink>
       </Hotlinks>
       <Margin />
 
       <h2>Gallery</h2>
-      <img style={{width: "50%"}} 
+      <img
+        style={{ width: "50%" }}
         src="/rdiff.png"
         alt="2 files being diffed"
       />
