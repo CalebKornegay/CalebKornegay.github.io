@@ -9,12 +9,14 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   max-width: 100rem;
+  margin: 0px 10px 0px 10px;
 `;
 
 const GalleryBox = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+  max-width: 100%;
 `;
 
 const GalleryRow = styled.div`
@@ -22,6 +24,7 @@ const GalleryRow = styled.div`
   flex-direction: row;
   column-gap: 10px;
   max-width: 100%;
+  justify-content: center;
 `;
 
 const Hotlinks = styled.div`

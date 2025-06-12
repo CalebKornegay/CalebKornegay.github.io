@@ -8,7 +8,7 @@ const Container = styled.div`
   align-items: center;
 `;
 
-export default function Home() {
+export default function About() {
   return (
     <Container id="home">
       <Margin />

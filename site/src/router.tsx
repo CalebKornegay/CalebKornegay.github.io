@@ -4,6 +4,7 @@ import App from "./App";
 import DigitalDash from "./views/projects/digitaldash";
 import OpenTicket from "./views/projects/openticket";
 import Rdiff from "./views/projects/rdiff";
+import Fzk from "./views/projects/fzk";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
             path: "digitaldash",
             element: <DigitalDash />,
           },
+          {
+            path: "fzk",
+            element: <Fzk />,
+          }
         ],
       },
     ],

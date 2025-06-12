@@ -1,7 +1,7 @@
 import React from "react";
 import ScrollToHashElement from "../components/scrolltohashelement";
 import styled from "styled-components";
-import Home from "./home";
+import About from "./about";
 import Interests from "./interests";
 import Projects from "./projects";
 import Experience from "./experience";
@@ -59,7 +59,7 @@ export default function HomeLayout() {
           inline="nearest"
           block="start"
         />
-        <Home />
+        <About />
         <Hotlinks />
         <Interests />
         <Projects />

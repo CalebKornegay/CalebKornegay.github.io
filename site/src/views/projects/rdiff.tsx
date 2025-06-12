@@ -9,6 +9,7 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   max-width: 100rem;
+  margin: 0px 10px 0px 10px;
 `;
 
 const Hotlinks = styled.div`
@@ -75,7 +76,7 @@ export default function Rdiff() {
 
       <h2>Gallery</h2>
       <img
-        style={{ width: "50%" }}
+        style={{ width: "100%" }}
         src="/rdiff.png"
         alt="2 files being diffed"
       />

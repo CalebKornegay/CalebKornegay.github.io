@@ -39,7 +39,7 @@ export const homelinks: homelink[] = [
 
 export const hotlinks = [
   {
-    resource: "/Resume.docx",
+    resource: "/Resume.pdf",
     icon: TbFileDownload,
     icon_color: "#121212",
   },
