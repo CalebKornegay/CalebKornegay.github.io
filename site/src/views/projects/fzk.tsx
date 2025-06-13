@@ -34,6 +34,10 @@ const Hotlink = styled.a`
 `;
 
 export default function Fzk() {
+    React.useEffect(() => {
+        window?.scrollTo(0, 0);
+    }, []);
+
   return (
     <Container>
         <Margin />

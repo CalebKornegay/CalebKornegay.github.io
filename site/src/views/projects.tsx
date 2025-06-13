@@ -171,8 +171,6 @@ export default function Projects() {
                 <Skill>Fuzzy Search</Skill>
                 <Skill>Traits</Skill>
                 <Skill>Synchronization</Skill>
-                <Skill>Conditional Compilation</Skill>
-                <Skill>Configurability</Skill>
             </SkillsBox>
         </Box>
 
