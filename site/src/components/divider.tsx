@@ -1,15 +1,11 @@
 import React from "react";
-import styled from "styled-components";
-
-const DividerInternal = styled.div`
-  background-color: grey;
-  opacity: 20%;
-  height: 10rem;
-  width: 3px;
-  margin-top: 2em;
-  margin-bottom: 3em;
-`;
+import { Divider as DividerInternal } from "@mui/material";
 
 export default function Divider() {
-  return <DividerInternal />;
+    return <DividerInternal 
+        orientation="vertical"
+        sx={{
+            height: "10rem", opacity: 0.8, marginTop: "3em", marginBottom: "3em"
+        }}
+    />;
 }

@@ -1,6 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import styled from '@emotion/styled';
 import Divider from "../components/divider";
+import { interests_paragraphs } from "../consts";
 
 const Container = styled.div`
   display: flex;
@@ -13,15 +14,9 @@ export default function Interests() {
     <Container id="interests">
       <Divider />
       <h2>Interests</h2>
-      <p>
-        I am mostly interested in embedded development using C/C++ and Rust
-        (which I learned recently)!
-      </p>
-      <p>
-        I also enjoy mobile development using Kotlin or React Native and backend
-        development in Golang.
-      </p>
-      <p>I am currently learning Zig and expanding my Rust portfolio.</p>
+      {interests_paragraphs.map((paragraph: string) => {
+        return <p>{paragraph}</p>
+      })}
     </Container>
   );
 }

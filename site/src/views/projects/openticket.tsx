@@ -1,6 +1,6 @@
 import React from "react";
 import { Margin } from "../../consts";
-import styled from "styled-components";
+import styled from '@emotion/styled';
 import Divider from "../../components/divider";
 import { FaGithub } from "react-icons/fa6";
 
