@@ -25,7 +25,9 @@ export default function HomeNavBar() {
     _: React.MouseEvent<HTMLElement>,
     newSection: Section,
   ) => {
-    setCurrentSection(newSection);
+    if (newSection) {
+        setCurrentSection(newSection);
+    }
   };
 
   return (
