@@ -3,7 +3,7 @@ import { Margin } from "../consts";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Accordion, AccordionDetails, AccordionSummary, List, ListItem, ListItemIcon, ListItemText, Stack, Typography } from "@mui/material";
 import { skills } from "../consts";
-import type { Skills, Skill } from "../consts";
+import type { Skill } from "../consts";
 
 export default function Skills() {
   return (
@@ -64,48 +64,6 @@ export default function Skills() {
                 </Accordion>
             );
         })}
-        {/* <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography component="div">Languages</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-                <List>
-                    <ListItem>
-                        <ListItemIcon>
-
-                        </ListItemIcon>
-                    </ListItem>
-                </List>
-            </AccordionDetails>
-        </Accordion>
-        <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography component="div">Frameworks</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-                <List>
-                    <ListItem>
-                        <ListItemIcon>
-                            
-                        </ListItemIcon>
-                    </ListItem>
-                </List>
-            </AccordionDetails>
-        </Accordion>
-        <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography component="div">Tools</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-                <List>
-                    <ListItem>
-                        <ListItemIcon>
-                            
-                        </ListItemIcon>
-                    </ListItem>
-                </List>
-            </AccordionDetails>
-        </Accordion> */}
       </Stack>
     </div>
   );
