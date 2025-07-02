@@ -12,28 +12,45 @@ export default function Projects() {
         <Margin />
         <h2>Projects</h2>
         <Outlet />
-        <Stack spacing={5}>
+        <Stack spacing={5}
+            alignItems="center"
+        >
             {projects.map((pt: project) => {
                 return (
-                    <Card>
+                    <Card 
+                        sx={{
+                            maxWidth: {xs: "100%", md: '100%'},
+                        }}
+                    >
                         <CardHeader
                             title={pt.title}
                             subheader={pt.timeline}
                         />
                         <CardMedia
                             component="img"
-                            height="400"
                             image={pt.media}
                             alt={pt.media_alt}
+                            sx={{
+                                objectFit: 'contain',
+                            }}
                         />
-                        <CardContent>
+                        <CardContent
+                            sx={{
+                                flexWrap: "wrap"
+                            }}
+                        >
                             <Typography variant="body2">
                                 {pt.description}
                             </Typography>
                             <Stack
                                 direction="row"
                                 spacing={1}
-                                sx={{justifyContent: "center", marginTop: 2}}
+                                sx={{
+                                    justifyContent: "center",
+                                    marginTop: 2,
+                                    flexWrap: "wrap",
+                                    rowGap: 1
+                                }}
                             >
                                 {pt.skills.map((skill: string) => {
                                     return (
@@ -43,15 +60,17 @@ export default function Projects() {
                                 
                             </Stack>
                         </CardContent>
-                        <CardActions>
+                        {pt.title === "Digital Dash" ? null :
+                            <CardActions>
                             <Button 
                                 size="small"
                                 color="primary"
-                                onClick={() => navigate("/projects/" + pt.title.toLowerCase())}
+                                onClick={() => navigate("/projects/" + pt.title.toLowerCase().replaceAll(' ', ''))}
                             >
                                 Learn More
                             </Button>
                         </CardActions>
+                        }
                     </Card>
                 );
             })}

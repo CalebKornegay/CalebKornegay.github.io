@@ -1,11 +1,9 @@
-import FileDownloadIcon from '@mui/icons-material/FileDownload';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { SvgIconTypeMap } from '@mui/material';
-import { OverridableComponent } from '@mui/material/OverridableComponent';
 import styled from '@emotion/styled';
+import { IconType } from "react-icons";
+import { FaLinkedin, FaGithub, FaRust } from 'react-icons/fa6';
+import { TbFileDownload } from 'react-icons/tb';
 
-import AmazonwebservicesOriginal from "devicons-react/lib/icons/AmazonwebservicesOriginalWordmark";
+import AmazonwebservicesOriginalWordmark from 'devicons-react/lib/icons/AmazonwebservicesOriginalWordmark';
 import AndroidOriginal from 'devicons-react/lib/icons/AndroidOriginal';
 import ArduinoOriginal from 'devicons-react/lib/icons/ArduinoOriginal';
 import BashOriginal from 'devicons-react/lib/icons/BashOriginal';
@@ -70,7 +68,7 @@ export type homelink = {
 
 export type hotlink = {
   resource: string;
-  icon: OverridableComponent<SvgIconTypeMap>;
+  icon: IconType;
   icon_color: string;
 };
 
@@ -127,17 +125,17 @@ export const homelinks = [
 export const hotlinks = [
   {
     resource: "/resume.pdf",
-    icon: FileDownloadIcon,
+    icon: TbFileDownload,
     icon_color: "#000",
   } as hotlink,
   {
     resource: "https://github.com/calebkornegay",
-    icon: GitHubIcon,
+    icon: FaGithub,
     icon_color: "#000",
   } as hotlink,
   {
     resource: "https://www.linkedin.com/in/caleb-kornegay",
-    icon: LinkedInIcon,
+    icon: FaLinkedin,
     icon_color: "#0077B5",
   } as hotlink
 ] as const;
@@ -177,6 +175,22 @@ export const projects = [
         media_alt: "Blockchain event ticketing"
     } as project,
     {
+        title: "Fzk",
+        timeline: "May - June 2025",
+        description: `A fuzzy matching TUI that makes killing processes a breeze.`,
+        skills: [
+            "Rust",
+            "Multithreading",
+            "TUI",
+            "Clap",
+            "Fuzzy Search",
+            "Traits",
+            "Synchronization"
+        ],
+        media: "/fzk_windows_default.png",
+        media_alt: "Fuzzy process killer"
+    } as project,
+    {
         title: "Rdiff",
         timeline: "April - May 2025",
         description: `A file difference viewer Terminal User Interface (TUI)
@@ -194,20 +208,19 @@ export const projects = [
         media_alt: "2 files being diffed"
     } as project,
     {
-        title: "Fzk",
-        timeline: "May - June 2025",
-        description: `A fuzzy matching TUI that makes killing processes a breeze.`,
+        title: "Digital Dash",
+        timeline: "November 2024 - January 2025",
+        description: "A digital representation of your car's data, easily viewable from your phone.",
         skills: [
-            "Rust",
-            "Multithreading",
-            "TUI",
-            "Clap",
-            "Fuzzy Search",
-            "Traits",
-            "Synchronization"
+            "Golang",
+            "Systemd",
+            "Bash",
+            "Kotlin",
+            "Bluetooth LE",
+            "OBD-II"
         ],
-        media: "/fzk_windows_default.png",
-        media_alt: "Fuzzy process killer"
+        media: "/digital_dash.png",
+        media_alt: "Digital Dash"
     } as project
 ] as const;
 
@@ -370,7 +383,7 @@ export const skills = {
         },
         {
             name: "AWS",
-            icon: AmazonwebservicesOriginal,
+            icon: AmazonwebservicesOriginalWordmark,
             children: [
                 {
                     name: "CDK"
@@ -529,6 +542,108 @@ export const skills = {
         }
     ]
 };
+
+export const fzk = {
+    paragraphs: [
+        `Fzk is an fzf-like TUI application that makes killing pesky applications a breeze.`,
+        `Conditional compilation for Windows, MacOS, and Linux makes it portable.`,
+        `You can match on process name or PID to make it easier to find.`
+     ],
+     links: [
+        {
+            href: "https://github.com/calebkornegay/fzk",
+            target: "_blank",
+            rel: "noreferrer",
+            icon: FaGithub,
+            icon_color: '#000'
+        },
+        {
+            href: "https://crates.io/crates/fzk",
+            target: "_blank",
+            rel: "noreferrer",
+            icon: FaRust,
+            icon_color: '#000'
+        }
+     ]
+} as const;
+
+export const openticket = {
+    paragraphs: [
+        `OpenTicket is a first-class replacement for TicketMaster and StubHub.`,
+        `Its services offer ticket creation, listing, purchase, and
+          peer-to-peer transfer with future work including a ticket marketplace
+          and memorabilia.`,
+        `It enforces single-sale tickets and denies the ability to price gouge
+          when reselling.`
+    ],
+    links: [
+        {
+            href: "https://github.com/OpenTix/platform",
+            target: "_blank",
+            rel: "noreferrer",
+            icon: FaGithub,
+            icon_color: '#000'
+        },
+        {
+            href: "https://github.com/OpenTix/eth-contracts",
+            target: "_blank",
+            rel: "noreferrer",
+            icon: FaGithub,
+            icon_color: '#000'
+        }
+    ],
+    image_alt: "blockchain event ticketing",
+    images: {
+        user_web: [
+            "/senior_design/user_home_1.png",
+            "/senior_design/user_home_2.png",
+            "/senior_design/user_home_3.png",
+            "/senior_design/user_profile_tickets.png",
+            "/senior_design/user_profile_ticket_transfer.png"
+        ],
+        vendor_web: [
+            "/senior_design/vendor_events.png",
+            "/senior_design/vendor_venues.png",
+            "/senior_design/vendor_event_history.png",
+            "/senior_design/vendor_profile.png"
+        ],
+        user_mobile: [
+            "/senior_design/user_mobile_details.jpg",
+            "/senior_design/user_mobile_tickets.jpg"
+        ],
+        vendor_mobile: [
+            "/senior_design/vendor_mobile_venues.jpg",
+            "/senior_design/vendor_mobile_events.jpg",
+            "/senior_design/vendor_mobile_details.jpg"
+        ]
+    }
+} as const;
+
+export const rdiff = {
+    paragraphs: [
+        `Rdiff is a terminal user interface (TUI) for viewing the differences
+          between 2 files.`,
+        `It supports syntax highlighting of many languages by leveraging the
+          Syntect crate.`,
+        `It is written completely in Rust, view the source code below!`
+    ],
+    links: [
+        {
+            href: "https://github.com/calebkornegay/rdiff",
+            target: "_blank",
+            rel: "noreferrer",
+            icon: FaGithub,
+            icon_color: '#000'
+        },
+        {
+            href: "https://crates.io/crates/rdiff3",
+            target: "_blank",
+            rel: "noreferrer",
+            icon: FaRust,
+            icon_color: '#000'
+        }
+    ]
+} as const;
 
 export const Margin = styled.div`
   margin-top: 6rem;

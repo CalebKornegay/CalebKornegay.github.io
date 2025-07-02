@@ -12,12 +12,11 @@ export default function Hotlinks() {
         const Icon = item.icon;
         return (
             <Link href={item.resource} target="_blank" rel="noreferrer">
-                <Icon sx={{
-                    color: item.icon_color === "#000"
-                    ? theme.palette.mode === "light"
-                    ? item.icon_color
-                    : '#fff'
-                    : item.icon_color}} />
+                <Icon color={
+                    theme.palette.mode === "dark" 
+                    && item.icon_color === "#000" ?
+                        "#fff" : item.icon_color
+                    } size={30} />
             </Link>
         );
       })}

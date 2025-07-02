@@ -1,92 +1,87 @@
 import React from 'react';
-import styled from '@emotion/styled';
 import { Margin } from '../../consts';
 import Divider from '../../components/divider';
-import { FaGithub, FaRust } from 'react-icons/fa6';
-
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  max-width: 100rem;
-  margin: 0px 10px 0px 10px;
-`;
-
-const Hotlinks = styled.div`
-  height: 3em;
-  width: 15rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  column-gap: 25px;
-`;
-
-const Hotlink = styled.a`
-  height: fit-content;
-  border-radius: 250px;
-  align-items: center;
-  justify-content: center;
-  border-color: white;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  padding: 5px;
-  display: flex;
-`;
+import { Grid, Stack, Typography, useTheme, Link, ImageList, ImageListItem } from '@mui/material';
+import { fzk } from '../../consts';
 
 export default function Fzk() {
     React.useEffect(() => {
         window?.scrollTo(0, 0);
     }, []);
+    const theme = useTheme();
 
   return (
-    <Container>
+    <Stack
+        alignItems="center"
+        justifyContent="center"
+        width="100%"
+    >
         <Margin />
-        <h1>Fzk</h1>
-        <h2>Description</h2>
-        <div>
-            <p>Fzk is an fzf-like TUI application that makes killing pesky applications a breeze.</p>
-            <p>Conditional compilation for Windows, MacOS, and Linux makes it portable.</p>
-            <p>You can match on process name or PID to make it easier to find.</p>
-        </div>
+        <Typography variant="h1" paddingBottom={4}>Fzk</Typography>
+        {fzk.paragraphs.map((paragraph: string) => {
+            return (
+                <Typography variant="body1" paddingBottom={2}>
+                    {paragraph}
+                </Typography>
+            );
+        })}
         <Divider />
 
-        <Hotlinks>
-            <Hotlink 
-                href="https://github.com/calebkornegay/fzk"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <FaGithub size={25} color="black"/>
-            </Hotlink>
-            <Hotlink
-                href="https://crates.io/crates/fzk"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <FaRust size={25} color="black" />
-            </Hotlink>
-        </Hotlinks>
+        <Grid 
+            container
+            spacing={15}
+            sx={{
+                width: '100%',
+                alignItems: "center",
+                justifyContent: "center",
+            }}
+        >
+            {fzk.links.map(link => {
+                const Icon = link.icon;
+                return (
+                    <Grid size={1}>
+                        <Link
+                            href={link.href}
+                            target={link.target}
+                            rel={link.rel}
+                        >
+                            <Icon 
+                                color={
+                                theme.palette.mode === "dark" 
+                                && link.icon_color === "#000" ?
+                                    "#fff" : link.icon_color
+                                }
+                                size={30}
+                            />
+                        </Link>
+                        
+                    </Grid>
+                );
+            })}
+        </Grid>
 
         <Margin />
-        
-        <h2>Gallery</h2>
-        <h3>Windows</h3>
-        <img
-        style={{ width: "100%" }}
-        src="/fzk_windows_default.png"
-        alt="Windows fzk"
-        />
-        
-        <Margin />
+        <Typography variant="h2" paddingBottom={3}>Gallery</Typography>
+        <Typography variant="h4">Windows</Typography>
+        <ImageList cols={1}>
+            <ImageListItem>
+                <img
+                    src="/fzk_windows_default.png"
+                    alt="Windows fzk"
+                />
+            </ImageListItem>
+        </ImageList>
 
-        <h3>Linux</h3>
-        <img
-        style={{ width: "100%" }}
-        src="/fzk_linux_default.png"
-        alt="Linux fzk"
-        />
-
+        <Typography variant="h4">Linux</Typography>
+        <ImageList cols={1}>
+            <ImageListItem key={1}>
+                <img
+                    src="/fzk_linux_default.png"
+                    alt="Linux fzk"
+                />
+            </ImageListItem>
+        </ImageList>
         <Margin />
-    </Container>
+    </Stack>
   );
 }
